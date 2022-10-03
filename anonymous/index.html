@@ -17,7 +17,7 @@
     <script>
     (async function() {
         const { text } = await( await fetch('/api/test/')).json();
-        document.querySelector('#name').textContent = text;
+        document.querySelector('#name').innerHTML = text;
     }());
     </script>
 </body>
