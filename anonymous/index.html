@@ -18,7 +18,7 @@
     (async function() {
         const { text } = await ( await fetch('/api/test/')).toString();
         const {text1 } = "Hello Azure";
-        document.querySelector('#name').innerHTML = "Hello";
+        document.querySelector('#name').innerHTML = text1;
     }());
     </script>
 </body>
