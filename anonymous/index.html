@@ -16,7 +16,7 @@
 
     <script>
     (async function() {
-        const { text } = await ( await fetch('/api/test/')).toString();
+        const { text } = await ( await fetch('/api/test/', { headers : {'Ocp-Apim-Subscription-Key': '3bb8f867849d428faf9204064b2833a8'},})).toString();
         let {text1 } = "Hello Azure";
         document.querySelector('#name').innerHTML = text1;
     }());
