@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Vanilla JavaScript App</title>
-</head>
+<html>
 
 <body>
-    <main>
-    <h1>Vanilla JavaScript App</h1>
-    <p>Loading content from the API: <b id="name">...</b></p>
-    </main>
 
-    <script>
-    (async function() {
-        const { text } = await ( await fetch('/api/test/', { headers : {'Ocp-Apim-Subscription-Key': '3bb8f867849d428faf9204064b2833a8'},})).toString();
-        let {text1 } = "Hello Azure";
-        document.querySelector('#name').innerHTML = await ( await fetch('/api/test/', { headers : {'Ocp-Apim-Subscription-Key': '3bb8f867849d428faf9204064b2833a8'},})).then((response) => response.json()).body;
-    }());
-    </script>
+<h1>JavaScript Fetch API</h1>
+
+<h2>The fetch() Method</h2>
+
+<p id="demo">Fetch a file to change this text.</p>
+
+
+<script>
+
+fetch('https://test-case.azure-api.net/api/test/', { headers : {'Ocp-Apim-Subscription-Key': '3bb8f867849d428faf9204064b2833a8'},})
+
+.then(x => x.text())
+
+.then(y => document.getElementById("demo").innerHTML = y);
+
+</script>
+
+
+
+
+
 </body>
 
 </html>
