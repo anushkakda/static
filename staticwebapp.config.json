@@ -1,5 +1,9 @@
 {
    "routes": [
+       {
+      "route": "/",
+      "rewrite": "/.auth/login/aad"
+       },
         {
             "route": "/authenticated/*",
             "allowedRoles": [ "authenticated" ]
