@@ -1,9 +1,5 @@
 {
    "routes": [
-       {
-      "route": "/",
-      "redirect": "/.auth/login/aad?post_login_redirect_uri=https://orange-grass-06f7acb10.1.azurestaticapps.net/anonymous"
-       },
         {
             "route": "/authenticated/*",
             "allowedRoles": [ "authenticated" ]
